@@ -1,0 +1,199 @@
+{
+  "name": "internations-connects-people",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "eslint": "^7.30.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js}": [
+      "eslint --cache --fix"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "valid-jsdoc": "warn",
+      "radix": "error",
+      "strict": [
+        "error",
+        "global"
+      ],
+      "array-bracket-spacing": "error",
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "comma-spacing": "error",
+      "comma-style": "error",
+      "eol-last": "error",
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "jsx-quotes": "error",
+      "key-spacing": [
+        "error",
+        {
+          "mode": "minimum"
+        }
+      ],
+      "lines-between-class-members": [
+        "error",
+        "always"
+      ],
+      "max-depth": [
+        "error",
+        4
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 80,
+          "ignoreUrls": true,
+          "ignoreStrings": true
+        }
+      ],
+      "new-cap": [
+        "error",
+        {
+          "capIsNewExceptions": [
+            "URI"
+          ]
+        }
+      ],
+      "no-unexpected-multiline": "error",
+      "operator-linebreak": [
+        "error",
+        "before"
+      ],
+      "quotes": [
+        "error",
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ],
+      "space-in-parens": [
+        "error",
+        "always",
+        {
+          "exceptions": [
+            "{}",
+            "()",
+            "[]"
+          ]
+        }
+      ],
+      "template-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "arrow-body-style": "error",
+      "arrow-parens": "error",
+      "arrow-spacing": "error",
+      "generator-star-spacing": [
+        "error",
+        "after"
+      ],
+      "no-var": "error",
+      "prefer-arrow-callback": "error",
+      "prefer-const": "error",
+      "prefer-rest-params": "error",
+      "prefer-spread": "error",
+      "prefer-template": "error",
+      "rest-spread-spacing": "error",
+      "import/first": "error",
+      "import/newline-after-import": [
+        "error",
+        {
+          "count": 2
+        }
+      ],
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            [
+              "external",
+              "internal"
+            ],
+            [
+              "parent",
+              "sibling",
+              "index"
+            ]
+          ]
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-boolean-value": "error",
+      "react/jsx-closing-bracket-location": "error",
+      "react/jsx-curly-spacing": [
+        "error",
+        {
+          "when": "always",
+          "children": true
+        }
+      ],
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [
+            ".jsx",
+            ".tsx",
+            ".test.js"
+          ]
+        }
+      ],
+      "react/jsx-tag-spacing": "error",
+      "react/jsx-wrap-multilines": "error",
+      "react/self-closing-comp": "error"
+    }
+  }
+}
